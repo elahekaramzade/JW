@@ -125,9 +125,9 @@ export default {
           api_key: process.env.VUE_APP_API_KEY,
         },
       });
-      this.credit = data.data.cast
-        .sort((a, b) => b.popularity - a.popularity)
-        .splice(1, 10);
+      this.credit = data.data.cast.sort((a, b) => b.popularity - a.popularity);
+      this.credit =
+        this.credit.length >= 10 ? this.credit.splice(1, 10) : this.credit;
     },
   },
   mounted() {
