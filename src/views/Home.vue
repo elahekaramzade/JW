@@ -42,7 +42,7 @@
       <span
         class="text-center text-gray-400"
         v-if="data.results"
-      >Showing result {{(data.page * 20)-20==0?1:(data.page * 20)-20}}-{{(data.page * 20)-20 + data.results.length}}</span>
+      >Showing result {{(data.page-1) * 20+1}}-{{(data.page-1) * 20 + data.results.length}}</span>
     </div>
   </div>
 </template>
